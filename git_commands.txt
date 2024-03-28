@@ -1,0 +1,82 @@
+version check
+git --version
+
+set user and email
+git config --global user.name "w3schools-test"
+git config --global user.email "test@w3schools.com"
+
+initialize git on current folder
+git init 
+
+check status
+git status
+
+stage one file using name. Pass extention also
+git add index.html
+
+stage multiple files
+git add --all
+OR
+git add -A
+
+remove file from staging
+git rm --cached index.html
+
+commit the changes with message
+git commit -m "First commit"
+
+check commit logs for a repo
+git log
+
+create new branch
+git branch new-feature
+
+show all branches
+git branch
+
+checkout to new branch
+git checkout new-feature
+
+merge branch. Go to master branch and type below
+git merge emergency-fix
+
+after merging, we can delete the branch using below
+git branch -d emergency-fix
+
+During merging, conflict might occur in a file. Open the file and fix code to remove conflict.
+Then stage and commit. It will be auto merged after commit. No need to merge again.
+
+set remote repo as origin
+git remote add origin https://github.com/pradeepkr11/practice.git
+
+push repo to github
+$ git push --set-upstream origin master
+OR
+git push -u origin master
+
+while working as a team on a project, it is possible that master has been updated by someone.
+So it is always good idea to pull latest from master branch. pull = fetch+merge
+git pull origin
+
+push changes to github
+git push origin
+
+show all local and remote branches.
+git branch -a
+
+push a new branch to github
+git push origin update-readme-too-much
+OR
+git push -u origin update-readme-too-much
+After pushing a new branch to github, we can create a pull request to merge that new branch with master
+
+To contribute to an existing repo in github, first clone the repo in local system
+git clone <repository-url>
+
+Only for new ongoing dev: after changing local code and commiting, if we want to push to github then use
+git push origin master
+OR
+git push origin
+
+To push a new branch to github, first commit in local then use below
+git push origin new-feature
